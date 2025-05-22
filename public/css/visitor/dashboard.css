@@ -1,0 +1,295 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Layout Background */
+body {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /* Defa#lt: kiri dan kanan sejajar */
+    height: 100vh;
+}
+
+aside {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background-color: #2c4a85;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+a {
+    text-decoration: none;
+}
+
+#tombolLogin {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    padding: 8px 16px;
+    background-color: #f0f4ff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+}
+#tombolLogin a {
+    color: #f0f4ff;
+    text-decoration: none;
+}
+
+#box-kiri {
+    width: 100%;
+    height: 87%;
+    background-color: #f0f4ff;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; /* Tengah secara vertikal */
+    padding-left: 50px;
+    padding-top: 50px;
+    /* Memberi ruang agar tidak tertimpa <h1> */
+}
+
+#box-kiri {
+    color: #2c4a85;
+    padding-bottom: 30px;
+}
+
+#box-kiri p {
+    margin-top: 5px;
+}
+#nama {
+    font-size: 2.5rem;
+    color: #2c4a85;
+}
+#jobdesk {
+    color: orange;
+}
+nav {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.sidebar-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sidebar-nav a {
+    text-decoration: none;
+    color: #2c4a85;
+    font-weight: bold;
+}
+.sidebar-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 15px;
+}
+
+.sidebar-nav a {
+    font-size: 1rem;
+    color: #2c4a85;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+    color: orange;
+    font-size: 1.2rem; /* Tambahkan ukuran lebih besar */
+    transform: scale(1.1); /* Opsional: buat sedikit membesar */
+    transition: all 0.3s ease; /* Agar transisinya halus */
+}
+
+main {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    background-color: #f0f4ff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+}
+.box-kanan {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-behavior: smooth; /* untuk fallback CSS */
+    width: 100%;
+    height: 87%;
+    background-color: #2c4a85;
+}
+.box-kanan h1 {
+    color: orange;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+#content {
+    flex: 1;
+    overflow: auto;
+}
+.box-kanan section {
+    padding: 30px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #2c4a85;
+    color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 0px 5px #f0f4ff;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.project-content {
+    padding: 16px;
+    flex: 1;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    color: orange; /* biru terang */
+    margin-bottom: 8px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: white; /* abu muda */
+}
+.about-paragraph {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: white;
+    text-align: justify;
+    white-space: pre-line; /* agar \n dari database jadi baris baru */
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap; /* Biar responsif, pindah baris kalau penuh */
+    gap: 20px; /* Jarak antar skill */
+    justify-content: center; /* Tengahin isi */
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.skill-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+/*  RESPONSIVE - HP */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        /* Ubah jadi vertikal di layar kecil */
+        height: auto;
+    }
+
+    aside {
+        width: 100%;
+        height: 40vh;
+    }
+    main {
+        width: 100%;
+        height: 70vh;
+    }
+
+    /* Bagian Kiri - Rapat ke Bawah */
+    aside {
+        display: flex;
+        align-items: flex-end;
+        /* Taruh di bawah */
+        justify-content: center;
+    }
+    nav {
+        display: none;
+    }
+    .sidebar-nav {
+        display: none;
+    }
+    #box-kiri {
+        width: 94%;
+        height: 90%;
+    }
+    #box-kiri h1 {
+        padding-top: 0px;
+    }
+
+    /* Bagian Kanan - Rapat ke Atas */
+    main {
+        display: flex;
+        align-items: flex-start;
+        /* Taruh di atas */
+        justify-content: flex-end;
+    }
+
+    .box-kanan {
+        width: 100%;
+        /* Ukuran lebih kecil agar terlihat pas */
+        height: 100%;
+        /* Sesuaikan tinggi */
+    }
+    #content {
+        width: 100%;
+        height: 100%;
+    }
+    nav {
+        display: none;
+    }
+    #tombolLogin {
+        display: none;
+    }
+}

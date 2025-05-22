@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 60px 0;
+}
+
+#box {
+    margin: 60px 0;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #2c4a85;
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: orange;
+}
+
+.textBox {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2c4a85;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#tombolSimpan {
+    margin-top: 30px;
+    background-color: #2c4a85;
+}
+
+#tombolSimpan:hover {
+    background-color: orange;
+}
+
+#tombolHapus {
+    margin-top: 10px;
+    background-color: red;
+}
+
+#tombolHapus:hover {
+    background-color: orange;
+}
+
+#error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 5px;
+}

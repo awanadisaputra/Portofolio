@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background-color: #f0f4ff;
+    height: 100vh;
+    display: flex;
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: #2c4a85;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+#nama {
+    margin: 0 auto 10px auto;
+    color: orange;
+    margin-bottom: 130px;
+}
+
+/* Hanya poin navbar */
+#poin_navbar {
+    margin: 0 auto 10px auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+/* Logout tetap di bawah */
+#logout {
+    margin: 0 auto 10px auto;
+    list-style-type: none;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+/* Link umum */
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: block;
+}
+
+/* Hover dan aktif */
+#navbar a:hover,
+#navbar a.active {
+    color: orange;
+}
+
+#content {
+    margin-left: 170px;
+    flex: 1;
+    padding: 40px;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 80px;
+    padding-top: 20px; /* Menghindari konten tertutup navbar */
+}
+
+hr {
+    margin: 0 auto 10px auto;
+    border: none;
+    border-top: 1px solid white;
+    margin: 10px 20px;
+    opacity: 0.4;
+    margin-bottom: 40px;
+}

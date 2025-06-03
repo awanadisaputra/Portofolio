@@ -154,19 +154,27 @@ main {
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 20px;
-    box-shadow: 0 0px 5px #f0f4ff;
     transition: transform 0.2s ease;
+    align-items: center;
 }
-
+.arrow-icon {
+    vertical-align: middle;
+    margin-left: 3px;
+}
+.project-card:hover .arrow-icon {
+    fill: orange;
+}
 .project-card:hover {
     transform: translateY(-4px);
 }
 
 .project-image {
-    width: 200px;
-    height: 150px;
+    width: 160px;
+    height: auto;
+    max-height: 100px;
     object-fit: cover;
     flex-shrink: 0;
+    margin-left: 16px;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
@@ -178,12 +186,15 @@ main {
 
 .project-title {
     font-size: 1.25rem;
-    color: orange; /* biru terang */
+    color: white; /* biru terang */
     margin-bottom: 8px;
 }
-
+.project-card:hover .project-title {
+    color: orange;
+}
 .project-description {
     font-size: 0.95rem;
+    white-space: pre-line;
     color: white; /* abu muda */
 }
 .about-paragraph {
